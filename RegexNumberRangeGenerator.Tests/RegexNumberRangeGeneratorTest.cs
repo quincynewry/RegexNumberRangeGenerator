@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Text.RegularExpressions;
 
 namespace RegexNumberRangeGenerator.Tests
@@ -106,6 +107,31 @@ namespace RegexNumberRangeGenerator.Tests
             Regex regex = new Regex(regexPattern);
 
             Assert.IsFalse(regex.IsMatch(testString));
+        }
+
+        [TestMethod]
+        public void Generate_Random_Pass()
+        {
+            // Assemble
+            for (int i = 0; i < 1000; i++)
+            {
+                int absoluteMax = 10000;
+                int min = new Random().Next(1, absoluteMax);
+                int max = new Random().Next(min, absoluteMax);
+                int testNumber = new Random().Next(min, max);
+                string testString = $"some text {testNumber} to test";
+
+                // Act
+                string regexPattern = RegexNumberRangeGenerator.Generate(min, max);
+
+                // Assert
+                Regex regex = new Regex(regexPattern);
+
+                if (!regex.IsMatch(testString))
+                {
+                    throw new Exception();
+                }
+            }
         }
     }
 }
