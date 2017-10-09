@@ -70,6 +70,8 @@ namespace RegexNumberRangeGenerator
                 stop = FillByZeros(max + 1, zeroesCount) - 1;
             }
 
+            stops.Sort();
+
             return stops;
         }
 
