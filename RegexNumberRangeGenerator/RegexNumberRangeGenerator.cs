@@ -1,20 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace RegexNumberRangeGenerator
 {
     public static class RegexNumberRangeGenerator
     {
-        public static void Generate(int min, int max)
+        public static string Generate(int min, int max)
         {
             string regex = string.Empty;
 
-            SplitPatterns(min, max).ForEach(x => regex += x + "|");
+            var patterns = SplitPatterns(min, max);
+            var lastPattern = patterns.Last();
 
-            regex = $"\\b({regex.Substring(0, regex.Length - 1)})\\b";
+            foreach (string pattern in patterns)
+            {
+                regex += pattern.Equals(lastPattern) ? pattern : pattern + "|";
+            }
 
-            Console.WriteLine(regex);
-            Console.ReadLine();
+            return $"\\b({regex})\\b";
         }
 
         private static List<string> SplitPatterns(int min, int max)
