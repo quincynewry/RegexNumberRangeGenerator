@@ -1,5 +1,4 @@
 # RegexNumberRangeGenerator
-Regex Number Range Generator
 
 #### Example:
 
