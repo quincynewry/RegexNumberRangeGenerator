@@ -16,7 +16,7 @@ namespace RegexNumberRangeGenerator.Tests
             string testString = "some text 99 to test";
 
             // Act
-            string regexPattern = RegexNumberRangeGenerator.Generate(min, max);
+            string regexPattern = RangeGenerator.Generate(min, max);
 
             // Assert
             Regex regex = new Regex(regexPattern);
@@ -33,7 +33,7 @@ namespace RegexNumberRangeGenerator.Tests
             string testString = "some text 101 to test";
 
             // Act
-            string regexPattern = RegexNumberRangeGenerator.Generate(min, max);
+            string regexPattern = RangeGenerator.Generate(min, max);
 
             // Assert
             Regex regex = new Regex(regexPattern);
@@ -50,7 +50,7 @@ namespace RegexNumberRangeGenerator.Tests
             string testString = "some text 799 to test";
 
             // Act
-            string regexPattern = RegexNumberRangeGenerator.Generate(min, max);
+            string regexPattern = RangeGenerator.Generate(min, max);
 
             // Assert
             Regex regex = new Regex(regexPattern);
@@ -67,7 +67,7 @@ namespace RegexNumberRangeGenerator.Tests
             string testString = "some text 899 to test";
 
             // Act
-            string regexPattern = RegexNumberRangeGenerator.Generate(min, max);
+            string regexPattern = RangeGenerator.Generate(min, max);
 
             // Assert
             Regex regex = new Regex(regexPattern);
@@ -84,7 +84,7 @@ namespace RegexNumberRangeGenerator.Tests
             string testString = "some text 65123 to test";
 
             // Act
-            string regexPattern = RegexNumberRangeGenerator.Generate(min, max);
+            string regexPattern = RangeGenerator.Generate(min, max);
 
             // Assert
             Regex regex = new Regex(regexPattern);
@@ -101,7 +101,7 @@ namespace RegexNumberRangeGenerator.Tests
             string testString = "some text 66001 to test";
 
             // Act
-            string regexPattern = RegexNumberRangeGenerator.Generate(min, max);
+            string regexPattern = RangeGenerator.Generate(min, max);
 
             // Assert
             Regex regex = new Regex(regexPattern);
@@ -122,7 +122,7 @@ namespace RegexNumberRangeGenerator.Tests
                 string testString = $"some text {testNumber} to test";
 
                 // Act
-                string regexPattern = RegexNumberRangeGenerator.Generate(min, max);
+                string regexPattern = RangeGenerator.Generate(min, max);
 
                 // Assert
                 Regex regex = new Regex(regexPattern);
@@ -143,7 +143,7 @@ namespace RegexNumberRangeGenerator.Tests
             string testString = "some text 3555 to test";
 
             // Act
-            string regexPattern = RegexNumberRangeGenerator.Generate(min, max);
+            string regexPattern = RangeGenerator.Generate(min, max);
 
             // Assert
             Regex regex = new Regex(regexPattern);

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace RegexNumberRangeGenerator
 {
-    public static class RegexNumberRangeGenerator
+    public static class RangeGenerator
     {
         public static string Generate(int min, int max)
         {
