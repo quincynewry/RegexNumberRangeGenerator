@@ -24,10 +24,8 @@ namespace RegexNumberRangeGenerator
         private static List<string> SplitPatterns(int min, int max)
         {
             List<string> subPatterns = new List<string>();
-            List<int> ranges = GetRanges(min, max);
+            List<int> ranges = GetRanges(min, max).Distinct().ToList();
             int start = min;
-
-            ranges = ranges.Distinct().ToList();
 
             foreach (int stop in ranges)
             {
