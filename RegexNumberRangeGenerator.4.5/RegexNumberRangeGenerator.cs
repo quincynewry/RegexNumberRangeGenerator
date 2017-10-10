@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace RegexNumberRangeGenerator
+namespace RegexNumberRangeGenerator._4._5
 {
     public static class RegexNumberRangeGenerator
     {
@@ -26,8 +26,6 @@ namespace RegexNumberRangeGenerator
             List<string> subPatterns = new List<string>();
             List<int> ranges = GetRanges(min, max);
             int start = min;
-
-            ranges = ranges.Distinct().ToList();
 
             foreach (int stop in ranges)
             {
