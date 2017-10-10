@@ -39,8 +39,10 @@ namespace RegexNumberRangeGenerator
         private static List<int> GetRanges(int min, int max)
         {
             int ninesCount = 1;
-            List<int> stops = new List<int>();
-            stops.Add(max);
+            List<int> stops = new List<int>
+            {
+                max
+            };
 
             int stop = FillByNines(min, ninesCount);
             int oldMin = min;

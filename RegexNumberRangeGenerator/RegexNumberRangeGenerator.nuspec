@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>RegexNumberRangeGenerator.MarkQuinn</id>
+    <version>1.0.0</version>
+    <title>RegexNumberRangeGenerator</title>
+    <authors>Mark Quinn</authors>
+    <owners>Mark Quinn</owners>
+    <projectUrl>https://github.com/mark-quinn-cf247/RegexNumberRangeGenerator</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Library for generating regex patterns for numeric ranges</description>
+    <copyright>Copyright 2017</copyright>
+    <tags>regex numeric range</tags>
+  </metadata>
+</package>
