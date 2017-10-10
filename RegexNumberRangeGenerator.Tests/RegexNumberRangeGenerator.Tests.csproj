@@ -55,9 +55,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RegexNumberRangeGenerator\RegexNumberRangeGenerator.csproj">
+    <ProjectReference Include="..\RegexNumberRangeGenerator\RegexNumberRangeGenerator.Core.csproj">
       <Project>{265f3f10-c183-4b81-953f-aeadcf8e2d6d}</Project>
-      <Name>RegexNumberRangeGenerator</Name>
+      <Name>RegexNumberRangeGenerator.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

@@ -133,5 +133,22 @@ namespace RegexNumberRangeGenerator.Tests
                 }
             }
         }
+
+        [TestMethod]
+        public void AdhocTest()
+        {
+            // Assemble
+            int min = 3493;
+            int max = 5765;
+            string testString = "some text 3555 to test";
+
+            // Act
+            string regexPattern = RegexNumberRangeGenerator.Generate(min, max);
+
+            // Assert
+            Regex regex = new Regex(regexPattern);
+
+            Assert.IsTrue(regex.IsMatch(testString));
+        }
     }
 }
